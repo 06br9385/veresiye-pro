@@ -7,17 +7,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Pages\Hesap\" />
-    <Folder Include="Pages\Kasa\" />
-    <Folder Include="Pages\CekSenet\" />
-    <Folder Include="Pages\Ayarlar\" />
-    <Folder Include="Pages\Servis\" />
-    <Folder Include="Pages\Raporlar\" />
-    <Folder Include="Pages\Tedarikci\" />
-    <Folder Include="Pages\Urun\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <PackageReference Include="bootstrap" Version="5.2.3" />
     <PackageReference Include="jQuery" Version="3.6.3" />
     <PackageReference Include="jQuery.Validation" Version="1.19.5" />

@@ -1,0 +1,41 @@
+﻿@page
+@model veresiye.Pages.Tedarikci.TedarikciIslemleriModel
+@{
+}
+
+<div class="text-center">
+    <h1 class="display-6">Müşteri İşlemleri</h1>
+    <hr />
+    <button onclick="musterikarti();">Müşteri Ekle</button><button>Müşteri Düzelt/Sil</button><button>Müşteri Listesi</button>
+    <hr />
+</div>
+
+<script type="text/javascript">
+    function musterikarti() {
+        document.getElementById('id01').style.display = 'block';
+    }
+</script>
+
+<div class="w3-container">
+    <div id="id01" class="w3-modal">
+        <div class="w3-modal-content">
+            <div class="w3-container">
+                <div class="text-center" style="margin-top:15px;">
+                    <p class="btn btn-light btn-sm">Müşteri Ekle</p>
+                </div>
+                <div class="form-group input">
+                    <input type="text" class="form-control" id="txtad" placeholder="Müşteri Adı" required>
+                </div>
+                <div class="form-group input">
+                    <input type="text" class="form-control" id="txtsoyad" placeholder="Müşteri Soyadı" required>
+                </div>
+                <div class="form-group input">
+                    <input type="text" class="form-control" id="txtunvan" placeholder="Müşteri Ünvan/Lakabı" required>
+                </div>
+            </div>
+        </div>
+        <div class="text-center" style="font:xx-small;">
+            <span onclick="document.getElementById('id01').style.display='none'" class="btn btn-danger btn-sm">Kapat</span>
+        </div>
+    </div>
+</div>
