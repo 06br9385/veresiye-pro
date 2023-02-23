@@ -1,0 +1,99 @@
+﻿<div class="w3-container">
+    <div id="id01" class="w3-modal border border-primary">
+        <div class="w3-modal-content" id="musterkikarti" style="border-radius: 50px;">
+            <div class="text-end" style="font:xx-small;">
+                <span onclick="document.getElementById('id01').style.display='none'" class="btn btn-danger btn-sm" style="border-radius: 50px;">X</span>
+            </div>
+            <form id="myform">
+                <div class="w3-container">
+                    <div class="text-center" style="margin-top:5px;">
+                        <h6>Müşteri Ekle</h6>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm">
+                            <input type="text" style="border-radius: 20px;margin:3px;" class="form-control form-control-sm" id="txtad" placeholder="Müşteri Adı" autocomplete="off" required>
+                        </div>
+                        <div class="col-sm">
+                            <input type="text" style="border-radius: 20px;margin:3px;" class="form-control form-control-sm" id="txtsoyad" placeholder="Müşteri Soyadı" autocomplete="off" required>
+                        </div>
+                        <div class="col-sm">
+                            <input type="text" style="border-radius: 20px;margin:3px;" class="form-control form-control-sm" id="txtunvan" placeholder="Müşteri Ünvan/Lakabı" autocomplete="off">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm">
+                            <input type="tel" maxlength="10" style="border-radius: 20px;margin:3px;" class="form-control form-control-sm" id="txttelefon" placeholder="Telefon" autocomplete="off">
+                        </div>
+                        <div class="col-sm">
+                            <input type="tel" maxlength="10" style="border-radius: 20px;margin:3px;" class="form-control form-control-sm" id="txtcep" placeholder="Cep Telefon" required autocomplete="off">
+                        </div>
+                        <div class="col-sm">
+                            <input type="tel" maxlength="10" style="border-radius: 20px;margin:3px;" class="form-control form-control-sm" id="txtfax" placeholder="Fax" autocomplete="off">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm">
+                            <input type="email" style="border-radius: 20px;margin:3px;" class="form-control form-control-sm" id="txtemail" placeholder="E-Mail Adres" autocomplete="off">
+                        </div>
+                        <div class="col-sm">
+                            <input type="tel" maxlength="11" style="border-radius: 20px;margin:3px;" class="form-control form-control-sm" id="txtkimlikno" placeholder="TCKN No" required autocomplete="off">
+                        </div>
+                        <div class="col-sm">
+                            <select id="cmbgrup" style="border-radius: 20px;margin:3px;" class="form-control form-control-sm" autocomplete="off">
+                                <option>
+                                    Müşteri Grubu Seçiniz
+                                </option>
+                                <option>
+                                    A-Grubu
+                                </option>
+                                <option>
+                                    B-Grubu
+                                </option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm">
+                            <input type="text" style="border-radius: 20px;margin:3px;color:black;background-color:white;" autocomplete="off" class="form-control form-control-sm" id="txtkayittarihi" value="Kayıt Tarihi @DateTime.Now.ToShortDateString()" readonly placeholder="Müşteri Adı" required>
+                        </div>
+                        <div class="col-sm">
+                            <input type="text" style="border-radius: 20px;margin:3px;" class="form-control form-control-sm" autocomplete="off" id="txtacilisbakiyesi" placeholder="Açılı Bakiyesi, Varsayılan 0.00 TL">
+                        </div>
+                        <div class="col-sm">
+                            <input type="hidden" />
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm">
+                            <textarea rows="3" style="border-radius: 20px;margin:3px;text-align:center;resize: none;" autocomplete="off" class="form-control form-control-sm" id="txtadres" placeholder="Adres" required></textarea>
+                        </div>
+                        <div class="col-sm">
+                            <textarea rows="3" style="border-radius: 20px;margin:3px;text-align:center;resize: none;" autocomplete="off" class="form-control form-control-sm" id="txtaciklama" placeholder="Açıklama"></textarea>
+                        </div>
+                        <div class="col-sm">
+                            <input type="hidden" />
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm">
+                            <div class="col-sm">
+                                <input class="form-check-input" type="checkbox" value="" id="Hesabını Aç" checked>
+                                <label class="form-check-label" for="Hesabını Aç" style="font-size:small;">
+                                    Hesabını Aç
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="text-center" style="font:xx-small;margin-top:20px;">
+                    <button class="btn btn-outline-primary btn-sm">Kaydet</button>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <h1></h1>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

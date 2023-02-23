@@ -1,0 +1,86 @@
+﻿@page
+@model veresiye.Pages.Musteri.MusteriListesiModel
+@{
+    Layout = null;
+}
+<link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+
+<div class="text-center">
+    <button id="btnprint" onclick="window.print(document.getElementById('btnprint').style.display = 'none');">Yazdır</button>
+</div>
+
+<div class="text-start">
+    <div class="text-end">
+        <b>Liste Tarihi: </b>@DateTime.Now.ToShortDateString()
+    </div>
+    <h5>Firma Adı Gelecek</h5>
+    <p>Firma Yetkilisi ve Telefon Numarası</p>
+</div>
+<hr />
+<div class="text-center">
+    <h4>Müşteri Listesi</h4>
+    <table id="musteribultable" class="table">
+        <thead>
+            <tr>
+                <th scope="col">S.No</th>
+                <th scope="col">Müşteri No</th>
+                <th scope="col">Adı</th>
+                <th scope="col">Soyadı</th>
+                <th scope="col">Cep Telefonu</th>
+                <th scope="col">Adres</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Mark</td>
+                <td>Otto</td>
+                <td>mdo</td>
+                <td>Mark</td>
+                <td>Otto</td>
+                <td>mdo</td>
+            </tr>
+            <tr>
+                <td>Mark</td>
+                <td>Otto</td>
+                <td>mdo</td>
+                <td>Mark</td>
+                <td>Otto</td>
+                <td>mdo</td>
+            </tr>
+            <tr>
+                <td>Mark</td>
+                <td>Otto</td>
+                <td>mdo</td>
+                <td>Mark</td>
+                <td>Otto</td>
+                <td>mdo</td>
+            </tr>
+            <tr>
+                <td>Mark</td>
+                <td>Otto</td>
+                <td>mdo</td>
+                <td>Mark</td>
+                <td>Otto</td>
+                <td>mdo</td>
+            </tr>
+            <tr>
+                <td>Mark</td>
+                <td>Otto</td>
+                <td>mdo</td>
+                <td>Mark</td>
+                <td>Otto</td>
+                <td>mdo</td>
+            </tr>
+            <tr>
+                <td>Mark</td>
+                <td>Otto</td>
+                <td>mdo</td>
+                <td>Mark</td>
+                <td>Otto</td>
+                <td>mdo</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+
