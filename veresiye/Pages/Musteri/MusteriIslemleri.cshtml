@@ -8,7 +8,9 @@
 <div class="text-center">
     <h1 class="display-6">Müşteri İşlemleri</h1>
     <hr />
-    <button onclick="musterikarti();">Müşteri Ekle</button><button>Müşteri Düzelt/Sil</button><button>Müşteri Listesi</button>
+    <button onclick="musterikarti();">Müşteri Ekle</button>
+    <button onclick="musteribul();">Müşteri Düzelt/Sil</button>
+    <button>Müşteri Listesi</button>
     <hr />
 </div>
 
@@ -16,19 +18,31 @@
     function musterikarti() {
         document.getElementById('id01').style.display = 'block';
         if (localStorage.getItem('mode')) {
-            $('#modalbody').removeClass().addClass("w3-modal-content dark-mode");
+            $('#musterkikarti').removeClass().addClass("w3-modal-content dark-mode");
         }
-        else{
-            $('#modalbody').removeClass().addClass("w3-modal-content");
+        else {
+            $('#musterkikarti').removeClass().addClass("w3-modal-content");
         }
     }
 
+    function musteribul() {
+        document.getElementById('id02').style.display = 'block';
+        if (localStorage.getItem('mode')) {
+            $('#musteribul').removeClass().addClass("w3-modal-content dark-mode");
+            $('#musteribultable').removeClass().addClass("table table-striped table-dark");
+        }
+        else {
+            $('#musteribul').removeClass().addClass("w3-modal-content");
+            $('#musteribultable').removeClass().addClass("table");
+        }
+    }
 
 </script>
 
+@*Müşteri Kartı*@
 <div class="w3-container">
-    <div id="id01" class="w3-modal">
-        <div class="w3-modal-content" id="modalbody" style="border-radius: 50px;">
+    <div id="id01" class="w3-modal border border-primary">
+        <div class="w3-modal-content" id="musterkikarti" style="border-radius: 50px;">
             <div class="text-end" style="font:xx-small;">
                 <span onclick="document.getElementById('id01').style.display='none'" class="btn btn-danger btn-sm" style="border-radius: 50px;">X</span>
             </div>
@@ -114,7 +128,125 @@
                     </div>
                 </div>
                 <div class="text-center" style="font:xx-small;margin-top:20px;">
-                    <button class="btn btn-light btn-sm">Kaydet</button>
+                    <button class="btn btn-outline-primary btn-sm">Kaydet</button>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <h1></h1>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+@*Müşteri Bul*@
+<div class="w3-container">
+    <div id="id02" class="w3-modal border border-primary">
+        <div class="w3-modal-content" id="musteribul" style="border-radius: 50px;">
+            <div class="text-end" style="font:xx-small;">
+                <span onclick="document.getElementById('id02').style.display='none'" class="btn btn-danger btn-sm" style="border-radius: 50px;">X</span>
+            </div>
+            <form id="myform">
+                <div class="w3-container">
+                    <div class="text-center" style="margin-top:5px;">
+                        <h6>Müşteri Bul</h6>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm">
+                            <input type="text" style="border-radius: 20px;margin:3px;" class="form-control form-control-sm" id="txtad" placeholder="Ad Göre Ara" autocomplete="off" required>
+                        </div>
+                        <div class="col-sm">
+                            <input type="text" style="border-radius: 20px;margin:3px;" class="form-control form-control-sm" id="txtsoyad" placeholder="Soyadına Göre Ara" autocomplete="off" required>
+                        </div>
+                        <div class="col-sm">
+                            <input type="text" style="border-radius: 20px;margin:3px;" class="form-control form-control-sm" id="txtunvan" placeholder="Ünvan/Lakabına Göre Ara" autocomplete="off">
+                        </div>
+                    </div>
+                    <div class="text-center" style="font:xx-small;margin-top:20px;">
+                        <button class="btn btn-outline-primary btn-sm">Ara</button>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm">
+                            <hr />
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12">
+                            <table id="musteribultable" class="table">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">Adı</th>
+                                        <th scope="col">Soyadı</th>
+                                        <th scope="col">Cep Telefonu</th>
+                                        <th scope="col">Seç</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Mark</td>
+                                        <td>Otto</td>
+                                        <td>mdo</td>
+                                        <td><button class="btn btn-outline-primary btn-sm">Seç</button></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Jacob</td>
+                                        <td>Thornton</td>
+                                        <td>fat</td>
+                                        <td><button class="btn btn-outline-primary btn-sm">Seç</button></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Larry</td>
+                                        <td>the Bird</td>
+                                        <td>twitter</td>
+                                        <td><button class="btn btn-outline-primary btn-sm">Seç</button></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Larry</td>
+                                        <td>the Bird</td>
+                                        <td>twitter</td>
+                                        <td><button class="btn btn-outline-primary btn-sm">Seç</button></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Larry</td>
+                                        <td>the Bird</td>
+                                        <td>twitter</td>
+                                        <td><button class="btn btn-outline-primary btn-sm">Seç</button></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Larry</td>
+                                        <td>the Bird</td>
+                                        <td>twitter</td>
+                                        <td><button class="btn btn-outline-primary btn-sm">Seç</button></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Larry</td>
+                                        <td>the Bird</td>
+                                        <td>twitter</td>
+                                        <td><button class="btn btn-outline-primary btn-sm">Seç</button></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Larry</td>
+                                        <td>the Bird</td>
+                                        <td>twitter</td>
+                                        <td><button class="btn btn-outline-primary btn-sm">Seç</button></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Larry</td>
+                                        <td>the Bird</td>
+                                        <td>twitter</td>
+                                        <td><button class="btn btn-outline-primary btn-sm">Seç</button></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Larry</td>
+                                        <td>the Bird</td>
+                                        <td>twitter</td>
+                                        <td><button class="btn btn-outline-primary btn-sm">Seç</button></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
                 </div>
             </form>
         </div>
