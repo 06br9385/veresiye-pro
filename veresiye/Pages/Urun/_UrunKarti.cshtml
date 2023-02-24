@@ -1,0 +1,125 @@
+﻿<div class="w3-container">
+    <div id="id01" class="w3-modal border border-primary">
+        <div class="w3-modal-content" id="urunkarti" style="border-radius: 50px;">
+            <div class="text-end" style="font:xx-small;">
+                <span onclick="document.getElementById('id01').style.display='none'" class="btn btn-danger btn-sm" style="border-radius: 50px;">X</span>
+            </div>
+            <form id="myform">
+                <div class="w3-container">
+                    <div class="text-center" style="margin-top:5px;">
+                        <h6>Ürün Ekle</h6>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm">
+                            <input type="text" onClick="this.select();" maxlength="13" style="border-radius: 20px;margin:3px;" class="form-control form-control-sm" id="txtbarkod" placeholder="Barkodu" autocomplete="off" required>
+                        </div>
+                    </div>
+                    <div class="row" style="margin-top:10px;">
+                        <div class="col-sm">
+                            <input type="text" onClick="this.select();" style="border-radius: 20px;margin:3px;" class="form-control form-control-sm" id="txtad" placeholder="Adı" autocomplete="off" required>
+                        </div>
+                        <div class="col-sm">
+                            <input type="number" onClick="this.select();" style="border-radius: 20px;margin:3px;" class="form-control form-control-sm" id="txtmiktar" placeholder="Miktar" autocomplete="off">
+                        </div>
+                        <div class="col-sm">
+                            <select id="cmbbirim" style="border-radius: 20px;margin:3px;" class="form-control form-control-sm">
+                                <option value="0">
+                                    Adet
+                                </option>
+                                <option value="1">
+                                    Cm
+                                </option>
+                                <option value="2">
+                                    Kilo
+                                </option>
+                                <option value="3">
+                                    Litre
+                                </option>
+                            </select>
+                        </div>
+                        <div class="col-sm text-start">
+                            <select id="cbmalindigiyer" style="border-radius: 20px;margin:3px;" class="form-control form-control-sm">
+                                <option>
+                                    Alındığı Yer Seçiniz
+                                </option>
+                                <option value="1">
+                                    Mehmet Kuruyemiş A.Ş
+                                </option>
+                                <option value="2">
+                                    Sağlam Gıda A.Ş
+                                </option>
+                                <option value="3">
+                                    Tatlı Süt Ürünleri A.Ş
+                                </option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm text-center">
+                            <label style="font-size:small">Alış Fiyatı</label>
+                            <input type="number" onClick="this.select();" step="0.01" style="border-radius: 20px;margin:3px;" class="form-control form-control-sm" id="txtalisfiyati" placeholder="Alış Fiyatı" value="0.00" required autocomplete="off">
+                        </div>
+                        <div class="col-sm text-center">
+                            <label style="font-size:small">Satış Fiyatı</label>
+                            <input type="number" onClick="this.select();" step="0.01" style="border-radius: 20px;margin:3px;" class="form-control form-control-sm" id="txtsatisfiyati" placeholder="Satış Fiyatı" value="0.00" autocomplete="off">
+                        </div>
+                        <div class="col-sm text-center">
+                            <label style="font-size:small">Alış Tarihi</label>
+                            <input type="date" style="border-radius: 20px;margin:3px;" class="form-control form-control-sm" id="txtalistarihi" value="@DateTime.Now.Date.ToString("yyyy-MM-dd")" required>
+                        </div>
+                        <div class="col-sm text-center">
+                            <label style="font-size:small">Son Kullanma Tarihi</label>
+                            <input type="date" style="border-radius: 20px;margin:3px;" class="form-control form-control-sm" id="txtsonkullanmatarihi" value="@DateTime.Now.AddYears(2).Date.ToString("yyyy-MM-dd")" required>
+                        </div>
+                    </div>
+                    <div class="text-center" style="font:xx-small;margin-top:20px;">
+                        <button class="btn btn-outline-primary btn-sm">Kaydet</button>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm">
+                            <h1></h1>
+                        </div>
+                    </div>
+                    <div class="row" id="urunlistesidiv" style="display:none;">
+                        <div class="col-12">
+                            <table id="urunkartitable" class="table">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">Barkodu</th>
+                                        <th scope="col">Adı</th>
+                                        <th scope="col">Miktarı</th>
+                                        <th scope="col">Satış Fiyatı</th>
+                                        <th scope="col">Sil</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>868985854855</td>
+                                        <td>Sabun</td>
+                                        <td>100 Adet</td>
+                                        <td>19,99</td>
+                                        <td><button class="btn btn-outline-danger btn-sm">Sil</button></td>
+                                    </tr>
+                                    <tr>
+                                        <td>868985854855</td>
+                                        <td>Kese</td>
+                                        <td>100 Adet</td>
+                                        <td>29,99</td>
+                                        <td><button class="btn btn-outline-danger btn-sm">Sil</button></td>
+                                    </tr>
+                                    <tr>
+                                        <td>868985854855</td>
+                                        <td>Lif</td>
+                                        <td>100 Adet</td>
+                                        <td>39,99</td>
+                                        <td><button class="btn btn-outline-danger btn-sm">Sil</button></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

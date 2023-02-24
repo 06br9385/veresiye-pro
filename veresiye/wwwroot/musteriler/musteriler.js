@@ -2,7 +2,7 @@
 
 function musterikarti() {
     document.getElementById('id01').style.display = 'block';
-    if (localStorage.getItem('mode')) {
+    if (localStorage.getItem('dark-mode')) {
         $('#musterkikarti').removeClass().addClass("w3-modal-content dark-mode");
     }
     else {
@@ -12,7 +12,7 @@ function musterikarti() {
 
 function musteribul() {
     document.getElementById('id02').style.display = 'block';
-    if (localStorage.getItem('mode')) {
+    if (localStorage.getItem('dark-mode')) {
         $('#musteribul').removeClass().addClass("w3-modal-content dark-mode");
         $('#musteribultable').removeClass().addClass("table table-striped table-dark");
     }
