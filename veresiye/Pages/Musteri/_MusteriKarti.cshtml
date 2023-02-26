@@ -1,9 +1,13 @@
-﻿<div class="w3-container">
-    <div id="id01" class="w3-modal border border-primary">
+﻿@page
+@model veresiye.Pages.Musteri._MusteriKartiModel
+@{
+    Layout = "_Layout";
+}
+
+
+<div class="w3-container">
+    <div id="id01" class="w3-modal">
         <div class="w3-modal-content" id="musterkikarti" style="border-radius: 50px;">
-            <div class="text-end" style="font:xx-small;">
-                <span onclick="document.getElementById('id01').style.display='none'" class="btn btn-danger btn-sm" style="border-radius: 50px;">X</span>
-            </div>
             <form id="myform">
                 <div class="w3-container">
                     <div class="text-center" style="margin-top:5px;">
