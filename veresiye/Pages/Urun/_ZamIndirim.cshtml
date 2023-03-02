@@ -1,0 +1,79 @@
+﻿@page
+@model veresiye.Pages.Urun._ZamIndirimModel
+@{
+    Layout = "_Layout";
+}
+
+<div class="w3-container">
+    <div id="id02" class="w3-modal">
+        <div class="w3-modal-content" id="urunbul" style="border-radius: 50px;">
+            <form id="myform">
+                <div class="w3-container">
+                    <div class="text-center" style="margin-top:5px;">
+                        <h6>Ürün Bul</h6>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm">
+                            <input type="text" style="border-radius: 20px;margin:3px;" class="form-control form-control-sm" id="txturunad" placeholder="Ürün Adına Göre Ara" autocomplete="off" required>
+                        </div>
+                        <div class="col-sm">
+                            <input type="text" style="border-radius: 20px;margin:3px;" class="form-control form-control-sm" id="txtbarkod" placeholder="Ürün Barkoduna Göre Ara" autocomplete="off" required>
+                        </div>
+                        <div class="col-sm">
+                            <select id="cbmalindigiyer" style="border-radius: 20px;margin:3px;" class="form-control form-control-sm">
+                                <option>
+                                    Ürün Grubu
+                                </option>
+                                <option value="1">
+                                    a-Grubu
+                                </option>
+                                <option value="2">
+                                    b-Grubu
+                                </option>
+                                <option value="3">
+                                    c-Grubu
+                                </option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="text-center" style="font:xx-small;margin-top:20px;">
+                        <button class="btn btn-outline-primary btn-sm">Ara</button>
+                    </div>
+                    <div class="row text-center" style="font:xx-small;margin-top:20px;">
+                        <div class="col-sm">
+                            <button class="btn btn-outline-primary btn-sm">Tümüne Zam Uygula</button>
+                            <button class="btn btn-outline-primary btn-sm">Tümüne İndirim Uygula</button>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12">
+                            <table id="uruntable" class="table">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">Barkod</th>
+                                        <th scope="col">Ad</th>
+                                        <th style="text-align:center;" scope="col" colspan="2">Operasyon</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>86898585855</td>
+                                        <td>Tadelle</td>
+                                        <td style="text-align:center;"><button class="btn btn-danger btn-sm">Zam</button></td>
+                                        <td style="text-align:center;"><button class="btn btn-warning btn-sm">İndirim</button></td>
+                                    </tr>
+                                    <tr>
+                                        <td>86898585856</td>
+                                        <td>Gong</td>
+                                        <td style="text-align:center;"><button class="btn btn-danger btn-sm">Zam</button></td>
+                                        <td style="text-align:center;"><button class="btn btn-warning btn-sm">İndirim</button></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

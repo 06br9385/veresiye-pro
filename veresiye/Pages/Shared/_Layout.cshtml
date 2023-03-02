@@ -207,7 +207,7 @@
         <ul class="sidebar-nav" id="sidebar-nav">
 
             <li class="nav-item">
-                <a class="nav-link " href="#">
+                <a class="nav-link " href="~/" onclick="submenuitem('Lisansız Kullanıcı','Lütfen Lisans İçin İletişime Geçiniz');">
                     <i class="bi bi-grid"></i>
                     <span>Anasayfa</span>
                 </a>
@@ -219,12 +219,12 @@
                 </a>
                 <ul id="components-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
                     <li>
-                        <a asp-area="" asp-page="/Musteri/_MusteriKarti">
+                        <a asp-area="" asp-page="/Musteri/_MusteriKarti" onclick="submenuitem('Müşteri İşlemleri','Müşteri Ekle');">
                             <i class="bi bi-circle"></i><span>Müşteri Ekle</span>
                         </a>
                     </li>
-                      <li>
-                        <a asp-area="" asp-page="/Musteri/_MusteriArama">
+                    <li>
+                        <a asp-area="" asp-page="/Musteri/_MusteriArama" onclick="submenuitem('Müşteri İşlemleri','Müşteri Arama');">
                             <i class="bi bi-circle"></i><span>Müşteri Arama</span>
                         </a>
                     </li>
@@ -242,21 +242,21 @@
                 </a>
                 <ul id="forms-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
                     <li>
-                        <a asp-area="" asp-page="/Urun/_UrunKarti">
+                        <a asp-area="" asp-page="/Urun/_UrunKarti" onclick="submenuitem('Ürün İşlemleri','Ürün Ekle');">
                             <i class="bi bi-circle"></i><span>Ürün Ekle</span>
                         </a>
                     </li>
-                            <li>
-                        <a href="#">
+                    <li>
+                        <a asp-area="" asp-page="/Urun/_UrunArama" onclick="submenuitem('Ürün İşlemleri','Ürün Arama');">
                             <i class="bi bi-circle"></i><span>Ürün Arama</span>
                         </a>
                     </li>
-                            <li>
-                        <a href="#">
-                            <i class="bi bi-circle"></i><span>Zam Uygula</span>
+                    <li>
+                        <a asp-area="" asp-page="/Urun/_ZamIndirim" onclick="submenuitem('Ürün İşlemleri','Zam & İndirim');">
+                            <i class="bi bi-circle"></i><span>Zam & İndirim</span>
                         </a>
                     </li>
-                            <li>
+                    <li>
                         <a href="#">
                             <i class="bi bi-circle"></i><span>Ürün Listesi</span>
                         </a>
@@ -310,22 +310,22 @@
                             <i class="bi bi-circle"></i><span>Tedarikci Ekle</span>
                         </a>
                     </li>
-                      <li>
+                    <li>
                         <a href="#">
                             <i class="bi bi-circle"></i><span>Tedarikci Düzelt</span>
                         </a>
                     </li>
-                      <li>
+                    <li>
                         <a href="#">
                             <i class="bi bi-circle"></i><span>Tedarikci Defteri</span>
                         </a>
                     </li>
-                      <li>
+                    <li>
                         <a href="#">
                             <i class="bi bi-circle"></i><span>Alacaklı Tedarikciler</span>
                         </a>
                     </li>
-                      <li>
+                    <li>
                         <a href="#">
                             <i class="bi bi-circle"></i><span>Borçlu Tedarikciler</span>
                         </a>
@@ -366,37 +366,37 @@
                             <i class="bi bi-circle"></i><span>Günlük Rapor</span>
                         </a>
                     </li>
-                     <li>
+                    <li>
                         <a href="#">
                             <i class="bi bi-circle"></i><span>İşlem Bazında Rapor</span>
                         </a>
                     </li>
-                     <li>
+                    <li>
                         <a href="#">
                             <i class="bi bi-circle"></i><span>Müşteri Bazında Rapor</span>
                         </a>
                     </li>
-                     <li>
+                    <li>
                         <a href="#">
                             <i class="bi bi-circle"></i><span>Borçlu Listesi</span>
                         </a>
                     </li>
-                     <li>
+                    <li>
                         <a href="#">
                             <i class="bi bi-circle"></i><span>Alacaklı Listesi</span>
                         </a>
                     </li>
-                     <li>
+                    <li>
                         <a href="#">
                             <i class="bi bi-circle"></i><span>Ödemesi Gelenler</span>
                         </a>
                     </li>
-                     <li>
+                    <li>
                         <a href="#">
                             <i class="bi bi-circle"></i><span>Özel Liste</span>
                         </a>
                     </li>
-                     <li>
+                    <li>
                         <a href="#">
                             <i class="bi bi-circle"></i><span>Satış Raporu</span>
                         </a>
@@ -442,11 +442,11 @@
     <main id="main" class="main">
 
         <div class="pagetitle">
-            <h1>Anasayfa</h1>
             <nav>
                 <ol class="breadcrumb">
-                    <li class="breadcrumb-item"><a href="#">Anasayfa</a></li>
-                    <li class="breadcrumb-item active">Bilgilendirme</li>
+                    <li class="breadcrumb-item"><a href="~/">Anasayfa</a></li>
+                    <li class="breadcrumb-item"><a id="secili-menu"></a></li>
+                    <li class="breadcrumb-item active" id="secili-alt-menu"></li>
                 </ol>
             </nav>
         </div><!-- End Page Title -->
@@ -480,3 +480,19 @@
 </body>
 
 </html>
+<script src="https://code.jquery.com/jquery-3.6.3.js"></script>
+<script type="text/javascript">
+
+    $(document).ready(function () {
+
+        $('#secili-menu').text(localStorage.getItem('menu'));
+        $('#secili-alt-menu').text(localStorage.getItem('submenu'));
+    });
+
+    function submenuitem(secilimenu,secilialtmenu){
+
+        localStorage.setItem('menu',secilimenu);
+        localStorage.setItem('submenu', secilialtmenu);
+
+    }
+</script>
