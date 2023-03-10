@@ -1,0 +1,118 @@
+﻿@page
+@model veresiye.Pages.Urun.UrunListesiModel
+@{
+    Layout = null;
+}
+
+<title>Ürün Listesi Yazıcı Modu</title>
+<!-- Favicons -->
+<link href="~/assets/img/favicon.png" rel="icon">
+<link href="~/assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+<link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+
+<div class="text-center">
+    <button id="btnprint" onclick="window.print(document.getElementById('btnprint').style.display = 'none');">Yazdır</button>
+</div>
+
+<div class="text-start">
+    <div class="text-end">
+        <b>Liste Tarihi: </b>@DateTime.Now.ToShortDateString()
+    </div>
+    <h5>Firma Adı Gelecek</h5>
+    <p>Firma Yetkilisi ve Telefon Numarası</p>
+</div>
+<hr />
+<div class="text-center">
+    <h4>Ürün Listesi</h4>
+    <table id="musteribultable" class="table">
+        <thead>
+            <tr>
+                <th scope="col">S.No</th>
+                <th scope="col">Barkodu</th>
+                <th scope="col">Adı</th>
+                <th scope="col">Miktar</th>
+                <th scope="col">Birim</th>
+                <th scope="col">Alış Fiyatı</th>
+                <th scope="col">Satış Fiyatı</th>
+                <th scope="col">Satır Tutarı</th>
+                <th scope="col">Alış Tarihi</th>
+                <th scope="col">Alındığı Yer</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>869858585485</td>
+                <td>Tadella</td>
+                <td>100</td>
+                <td>Adet</td>
+                <td>1TL</td>
+                <td>5TL</td>
+                <td>500TL</td>
+                <td>05.05.2022</td>
+                <td>Makbul Gıda</td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>869858585485</td>
+                <td>Tadella</td>
+                <td>100</td>
+                <td>Adet</td>
+                <td>1TL</td>
+                <td>5TL</td>
+                <td>500TL</td>
+                <td>05.05.2022</td>
+                <td>Makbul Gıda</td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>869858585485</td>
+                <td>Tadella</td>
+                <td>100</td>
+                <td>Adet</td>
+                <td>1TL</td>
+                <td>5TL</td>
+                <td>500TL</td>
+                <td>05.05.2022</td>
+                <td>Makbul Gıda</td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>869858585485</td>
+                <td>Tadella</td>
+                <td>100</td>
+                <td>Adet</td>
+                <td>1TL</td>
+                <td>5TL</td>
+                <td>500TL</td>
+                <td>05.05.2022</td>
+                <td>Makbul Gıda</td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>869858585485</td>
+                <td>Tadella</td>
+                <td>100</td>
+                <td>Adet</td>
+                <td>1TL</td>
+                <td>5TL</td>
+                <td>500TL</td>
+                <td>05.05.2022</td>
+                <td>Makbul Gıda</td>
+            </tr>
+        </tbody>
+       
+    </table>
+</div>
+
+<footer id="footer" class="footer">
+    <div class="text-end">
+        <tfoot>
+            <tr>
+                <td></td>
+                <td></td>
+                <td>Toplam Ürün Miktarı <b>500 Adet</b> Toplam Tutar <b>5000 TL</b></td>
+            </tr>
+        </tfoot>
+   </div>
+</footer>
