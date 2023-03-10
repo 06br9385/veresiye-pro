@@ -1,9 +1,9 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
-namespace veresiye.Pages.Hesap
+namespace veresiye.Pages.Urun
 {
-    public class HesapIslemleriModel : PageModel
+    public class UrunListesiModel : PageModel
     {
         public void OnGet()
         {

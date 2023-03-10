@@ -1,0 +1,92 @@
+﻿@page
+@model veresiye.Pages.Urun._SorguluListeModel
+@{
+    Layout = "_Layout";
+}
+
+<div class="w3-container">
+    <div id="id02" class="w3-modal">
+        <div class="w3-modal-content" id="urunbul" style="border-radius: 50px;">
+            <form id="myform">
+                <div class="w3-container">
+                    <div class="text-center" style="margin-top:5px;">
+                        <h6>Ürünleri Raporla</h6>
+                    </div>
+                    <div class="row text-center">
+                        <b>Son kullanma tarihi;</b>
+                        <div class="col-sm">
+                            <input type="date" style="border-radius: 20px;margin:3px;" class="form-control form-control-sm" id="txtbastarih" autocomplete="off" required>
+                        </div>
+                        <b> ile </b>
+                        <div class="col-sm">
+                            <input type="date" style="border-radius: 20px;margin:3px;" class="form-control form-control-sm" id="txtbittarih" autocomplete="off" required>
+                        </div>
+                        <b>bitecek olan ürünleri;</b>
+                    </div>
+                    <div class="text-center" style="font:xx-small;margin-top:20px;">
+                        <div class="col-sm">
+                            <input type="checkbox"> Stokta kalmamış ürünleri gösterme</input>
+                        </div>
+                        <button class="btn btn-outline-primary btn-sm">Raporla</button>
+                        <button class="btn btn-outline-primary btn-sm">Yazdır</button>
+                    </div>
+                    <div class="row">
+                        <h1></h1>
+                    </div>
+                    <div class="row">
+                        <div class="col-12">
+                            <table id="uruntable" class="table">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">Barkod</th>
+                                        <th scope="col">Ad</th>
+                                        <th scope="col">Miktar</th>
+                                        <th scope="col">A.Fyt</th>
+                                        <th scope="col">S.Fyt</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>86985858558</td>
+                                        <td>Tadella</td>
+                                        <td>22</td>
+                                        <td>15.99</td>
+                                        <td>29.99</td>
+                                    </tr>
+                                    <tr>
+                                        <td>86985858558</td>
+                                        <td>Tadella</td>
+                                        <td>22</td>
+                                        <td>15.99</td>
+                                        <td>29.99</td>
+                                    </tr>
+                                    <tr>
+                                        <td>86985858558</td>
+                                        <td>Tadella</td>
+                                        <td>22</td>
+                                        <td>15.99</td>
+                                        <td>29.99</td>
+                                    </tr>
+                                    <tr>
+                                        <td>86985858558</td>
+                                        <td>Tadella</td>
+                                        <td>22</td>
+                                        <td>15.99</td>
+                                        <td>29.99</td>
+                                    </tr>
+                                    <tr>
+                                        <td>86985858558</td>
+                                        <td>Tadella</td>
+                                        <td>22</td>
+                                        <td>15.99</td>
+                                        <td>29.99</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

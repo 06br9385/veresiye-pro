@@ -1,9 +1,9 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
-namespace veresiye.Pages.Musteri
+namespace veresiye.Pages.Hesap
 {
-    public class MusteriIslemleriModel : PageModel
+    public class _PesinSatisModel : PageModel
     {
         public void OnGet()
         {
